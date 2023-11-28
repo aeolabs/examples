@@ -1,0 +1,12 @@
+[[server]]
+listens = [ "localhost:3000", "localhost:3001" ]
+name = "arpx"
+description = "aeol reverse proxy extended"
+
+[[server.matches]]
+uri = "/api"
+forward = "127.0.0.1:8080"
+
+[[server.matches]]
+uri = "/"
+serve = "/home/mlopez/arxp/statics"
